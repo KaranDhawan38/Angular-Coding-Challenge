@@ -1,0 +1,62 @@
+<div class="header-container">
+    <button mat-raised-button color="warn" class="logout-button" (click)="logoutUser()">Logout</button>
+</div>
+
+<div class="table-container">
+    <table mat-table [dataSource]="dataSource" color="primary" class="mat-elevation-z8">
+        <!-- Customer Name Column -->
+        <ng-container matColumnDef="CustomerName">
+          <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+        </ng-container>
+      
+        <!-- Project Name Column -->
+        <ng-container matColumnDef="ProjectName">
+          <th mat-header-cell *matHeaderCellDef> Project Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.projectName}} </td>
+        </ng-container>
+      
+        <!-- Global Master Column -->
+        <ng-container matColumnDef="GlobalMaster">
+          <th mat-header-cell *matHeaderCellDef> Global Master </th>
+          <td mat-cell *matCellDef="let element"> {{element.globalMaster}} </td>
+        </ng-container>
+      
+        <!-- Indicator Column -->
+        <ng-container matColumnDef="Indicator">
+          <th mat-header-cell *matHeaderCellDef> Indicator </th>
+          <td mat-cell *matCellDef="let element"> {{element.indicator}} </td>
+        </ng-container>
+    
+        <!-- Technical Person Column -->
+        <ng-container matColumnDef="TechnicalPerson">
+            <th mat-header-cell *matHeaderCellDef> Technical Person </th>
+            <td mat-cell *matCellDef="let element"> {{element.technicalPerson}} </td>
+        </ng-container>
+    
+        <!-- Forecast Generated Column -->
+        <ng-container matColumnDef="ForecastGenerated">
+            <th mat-header-cell *matHeaderCellDef> Forecast Generated </th>
+            <td mat-cell *matCellDef="let element"> {{element.forecastGenerated}} </td>
+        </ng-container>
+    
+        <!-- Actions Column -->
+        <ng-container matColumnDef="Actions">
+            <th mat-header-cell *matHeaderCellDef> Actions </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon>visibility</mat-icon>
+                  </button>
+                  <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

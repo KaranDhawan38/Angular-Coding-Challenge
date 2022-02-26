@@ -1,0 +1,36 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header-container{
+    margin: 0px 0px 27px 10px;
+}
+
+.heading {
+    margin-bottom: 0px;
+}
+
+.sub-heading {
+    margin-left: 5px;
+}
+
+mat-card {
+    width: 35em;
+    margin-top: 2em;
+    border:  1px solid #dadce0;
+}
+
+mat-form-field, .login-button {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+mat-card-content {
+    padding: 0px 20px 0px 20px;
+}
+
+mat-card-actions {
+    padding: 0px 25px 0px 25px;
+    margin-bottom: 20px !important;
+}
